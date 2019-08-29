@@ -9,3 +9,5 @@ You can set 4 different classes at the application. Click on the related class a
 After the training you can show one of 4 classes to the webcam and you can see prediction and probability at the Output section.
 
 ### Note: Minimum 30 images per class will increase the accuracy.
+
+![alt text](https://github.com/erayonler/tensorflowjs-image-classifier.git/static/eray_onler.png)
