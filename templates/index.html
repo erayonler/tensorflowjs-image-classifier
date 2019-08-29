@@ -1,0 +1,111 @@
+<html>
+  <head>
+    <!-- Load the latest version of TensorFlow.js -->
+    <script src="https://unpkg.com/@tensorflow/tfjs"></script>
+    <script src="https://unpkg.com/@tensorflow-models/mobilenet@2.0.2"></script>
+    <script src="https://unpkg.com/@tensorflow-models/knn-classifier"></script>
+    <!-- Load the latest version of Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </head>
+  <body class="pt-5">
+
+
+    <!-- Add an image that we will use to test -->
+
+    <nav class="navbar navbar-dark bg-success fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="/static/01.png" width="80" height="50" class="d-inline-block align-center" alt="">
+          Custom Image Classifier
+        </a>
+      </div>
+    </nav>
+
+    <br>
+
+
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Tensorflow.js Image Classifier</h1>
+        <p>
+          This is a custom image classifier which is powered by Tensorflow.js .
+          You can train your classifier (4 classes) on the fly in the browser.
+          This application is using pre-trained model for image classification called MobileNet.
+          Your model will be trained on top of this one to customize the image classes it recognizes.
+          So you can create highly accurate model with minimal training data.
+        </p>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="card-deck">
+        <div class="card bg-primary">
+          <div class="card-body text-center">
+            <p class="card-text text-white display-4" style="font-size:4vw;">Input</p>
+            <video autoplay playsinline muted id="webcam" width="224" height="224" class="embed-responsive"></video>
+          </div>
+        </div>
+        <div class="card bg-warning">
+          <div class="card-body text-center">
+            <p class="card-text text-white display-4" style="font-size:4vw;">Training</p>
+            <p><button id="class-a" class="btn btn-secondary btn-lg">Add A</button></p>
+            <p><button id="class-b" class="btn btn-secondary btn-lg">Add B</button></p>
+            <p><button id="class-c" class="btn btn-secondary btn-lg">Add C</button></p>
+            <p><button id="noaction" class="btn btn-secondary btn-lg">No Action</button></p>
+          </div>
+        </div>
+        <div class="card bg-success">
+          <div class="card-body text-center">
+            <p class="card-text text-white display-4" style="font-size:4vw;">Output</p>
+            <div id="console" class="text-white"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="container">
+      <div class="jumbotron">
+        <h3>How to use</h3>
+        <ul>
+          <li>Allow your browser to reach you webcam. Your webcam will be source of your image inputs</li>
+          <li>You can set 4 different classes at the application. Click on the related class at <strong>Training</strong> section while you are showing it to the webcam</li>
+          <li>After the training you can show one of 4 classes to the webcam and you can see prediction and probability at the <strong>Output</strong> section.</li>
+        </ul>
+
+        <strong>Note: Minimum <span class="text-danger">30 images per class</span> will increase the accuracy.</strong>
+
+      </div>
+      <h3>Technologies we used</h3>
+      <br>
+      <div class="row">
+        <div class="col"><a href="https://www.python.org/"><img src="/static/python.png" alt="python" class="img-fluid img-responsive"></a></div>
+        <div class="col"><a href="https://palletsprojects.com/p/flask/"><img src="/static/flask.png" alt="flask" class="img-fluid img-responsive"></a></div>
+        <div class="col"><a href="https://www.tensorflow.org/js"><img src="/static/tensorflowjs.png" alt="Tensorflow.js" class="img-fluid img-responsive"></a></div>
+        <div class="col"><a href="https://www.w3schools.com/html/"><img src="/static/html.png" alt="HTML" class="img-fluid img-responsive"></a></div>
+        <div class="col"><a href="https://getbootstrap.com/"><img src="/static/bootstrap.jpg" alt="Bootstrap" class="img-fluid img-responsive"></a></div>
+      </div>
+    </div>
+
+
+    <br>
+    <!-- Footer -->
+    <footer class="page-footer font-small bg-success">
+
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3 text-white">© 2019 Copyright:
+        <a href="https://machinelearningcourse.io" class="text-white"> Make Money with Machine Learning</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+    <!-- Load index.js after the content of the page -->
+    <script src="/static/js/index.js"></script>
+  </body>
+</html>
