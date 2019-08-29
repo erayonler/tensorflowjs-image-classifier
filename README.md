@@ -10,4 +10,4 @@ After the training you can show one of 4 classes to the webcam and you can see p
 
 ### Note: Minimum 30 images per class will increase the accuracy.
 
-![alt text](https://github.com/erayonler/tensorflowjs-image-classifier.git/static/eray_onler.png)
+![Screenshot](eray_onler.png)
