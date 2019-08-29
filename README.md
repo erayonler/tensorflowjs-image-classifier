@@ -8,6 +8,6 @@ This is a custom image classifier which is powered by **Tensorflow.js** . You ca
 - You can set 4 different classes at the application. Click on the related class at **Training** section while you are showing it to the webcam
 - After the training you can show one of 4 classes to the webcam and you can see prediction and probability at the **Output** section.
 
-### Note: Minimum 30 images per class will increase the accuracy.
+**Note:** Minimum **30 images** per class will increase the accuracy.
 
 ![Screenshot](eray_onler.png)
